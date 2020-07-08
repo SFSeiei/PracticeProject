@@ -1,3 +1,12 @@
+import java.lang.ProcessBuilder.Redirect.Type;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+import java.lang.reflect.Method;
+import java.util.GregorianCalendar;
+import java.lang.annotation.Annotation;
+
 public class JavaLearning {
 
 }
@@ -64,5 +73,53 @@ class StringTest {
         String s2 = "abc";
         System.out.println(s1 == s2 + "\n");
         System.out.println(s1.equals(s2) + "\n");
+    }
+}
+
+class StringBufferTest {
+
+    public static void main(String[] args) {
+        StringBuffer a = new StringBuffer("123");
+        a.append("123");
+    }
+
+    @Deprecated
+    public void printStringBuffer() {
+        StringBuffer a = new StringBuffer("123");
+        a.append("123");
+        System.out.println(a);
+    }
+}
+
+class annotationTest {
+
+    public static void main(String[] args) {
+        StringBufferTest a = new StringBufferTest();
+        a.printStringBuffer();
+
+    }
+}
+
+@Target(value = { ElementType.METHOD, ElementType.FIELD })
+@Retention(value = RetentionPolicy.RUNTIME)
+@interface Hello {
+    String value();
+}
+
+class annotationTest2 {
+    @Hello("123")
+    public static void main(String[] args) {
+        try {
+            // この方法だけで案のテーションを取得するか？
+            Class cls = annotationTest2.class;
+            Method method = cls.getMethod("main", String[].class);
+            Hello hello = method.getAnnotation(Hello.class);
+
+            System.out.println(hello.toString());
+            System.out.println(hello.hashCode());
+            System.out.println(hello.annotationType());
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
     }
 }
