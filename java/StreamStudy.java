@@ -2,6 +2,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Random;
+import java.util.stream.Collectors;
 
 class Student {
     int no;
@@ -68,8 +70,7 @@ public class StreamStudy {
         list.add(stuC);
         list.add(stuD);
         list.add(stuE);
-        // -------------------------------- Iterator 方式
-        // (外部迭代方式)---------------------------------------
+        // -------------------------------- Iterator 方式  (外部迭代方式)---------------------------------------
         // Iterator<Student> stuIterator = list.iterator();
         // while (stuIterator.hasNext()) {
         // Student stu = stuIterator.next();
@@ -77,8 +78,7 @@ public class StreamStudy {
         // System.out.println(stu.getName());
         // }
         // }
-        // -------------------------------- Stream 方式
-        // （聚合操作方式）---------------------------------------
+        // -------------------------------- Stream 方式 （聚合操作方式）---------------------------------------
         list.stream().filter(student -> student.getSex().equals("G"))
                 .forEach(student -> System.out.println(student.getName()));
 
@@ -110,5 +110,20 @@ class concat0BeforeStr {
         });
         str = String.join(",", sListAfter);
         System.out.println(str);
+    }
+}
+
+// ------------------------------------------ 菜鸟教程 ---------------------------------------------------
+class StreamForRunoob {
+    public static void main(String[] args) {
+        List<String> strings = Arrays.asList("abc", "", "bc", "efg", "abcd", "", "jkl");
+        List<String> filtered = strings.stream().filter(string -> !string.isEmpty()).collect(Collectors.toList());
+
+        filtered.stream().forEach(x -> System.out.print(x + "\n"));
+
+        // ---------------------------------------- 使用 forEach 输出了10个随机数 ----------------------------------------//
+        LineAndTitle.printTitle("使用 forEach 输出了10个随机数");
+        Random random = new Random();
+        random.ints().limit(10).forEach(System.out::println);
     }
 }
