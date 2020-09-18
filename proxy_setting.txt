@@ -6,3 +6,12 @@ git config https.proxy https://zhangxuping:823116291@192.168.1.200:8080
 
 git config http.proxy http://zhangxuping:740969264@192.168.1.200:8080
 git config https.proxy https://zhangxuping:740969264@192.168.1.200:8080
+
+git config --global http://zhangxuping:LV80YXMS@192.168.1.200:8080
+git config --global https://zhangxuping:LV80YXMS@192.168.1.200:8080
+
+git config --global http://zhangxuping:823116291@192.168.1.200:8080
+git config --global https://zhangxuping:823116291@192.168.1.200:8080
+
+git config --global http://zhangxuping:740969264@192.168.1.200:8080
+git config --global https://zhangxuping:740969264@192.168.1.200:8080
