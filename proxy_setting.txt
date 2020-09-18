@@ -1,2 +1,8 @@
 git config http.proxy http://zhangxuping:LV80YXMS@192.168.1.200:8080
 git config https.proxy https://zhangxuping:LV80YXMS@192.168.1.200:8080
+
+git config http.proxy http://zhangxuping:823116291@192.168.1.200:8080
+git config https.proxy https://zhangxuping:823116291@192.168.1.200:8080
+
+git config http.proxy http://zhangxuping:740969264@192.168.1.200:8080
+git config https.proxy https://zhangxuping:740969264@192.168.1.200:8080
