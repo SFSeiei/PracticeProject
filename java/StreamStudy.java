@@ -1,3 +1,7 @@
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -70,7 +74,8 @@ public class StreamStudy {
         list.add(stuC);
         list.add(stuD);
         list.add(stuE);
-        // -------------------------------- Iterator 方式  (外部迭代方式)---------------------------------------
+        // -------------------------------- Iterator 方式
+        // (外部迭代方式)---------------------------------------
         // Iterator<Student> stuIterator = list.iterator();
         // while (stuIterator.hasNext()) {
         // Student stu = stuIterator.next();
@@ -78,7 +83,8 @@ public class StreamStudy {
         // System.out.println(stu.getName());
         // }
         // }
-        // -------------------------------- Stream 方式 （聚合操作方式）---------------------------------------
+        // -------------------------------- Stream 方式
+        // （聚合操作方式）---------------------------------------
         list.stream().filter(student -> student.getSex().equals("G"))
                 .forEach(student -> System.out.println(student.getName()));
 
@@ -113,7 +119,8 @@ class concat0BeforeStr {
     }
 }
 
-// ------------------------------------------ 菜鸟教程 ---------------------------------------------------
+// ------------------------------------------ 菜鸟教程
+// ---------------------------------------------------
 class StreamForRunoob {
     public static void main(String[] args) {
         List<String> strings = Arrays.asList("abc", "", "bc", "efg", "abcd", "", "jkl");
@@ -121,9 +128,22 @@ class StreamForRunoob {
 
         filtered.stream().forEach(x -> System.out.print(x + "\n"));
 
-        // ---------------------------------------- 使用 forEach 输出了10个随机数 ----------------------------------------//
+        // ---------------------------------------- 使用 forEach 输出了10个随机数
+        // ----------------------------------------//
         LineAndTitle.printTitle("使用 forEach 输出了10个随机数");
         Random random = new Random();
         random.ints().limit(10).forEach(System.out::println);
+    }
+}
+
+class StreamForJson {
+    public static void main(String[] args) throws IOException {
+        // デバッグ用のJSONファイルの呼び出し
+        String json = Files
+                .lines(Paths.get("./entry_jobchange_data.json"), Charset.forName("UTF-8"))
+                .collect(Collectors.joining(System.getProperty("line.separator")));
+
+        // System.out.print(json);
+        // JSONObject json_test = JSONObject.fromObject(json);
     }
 }

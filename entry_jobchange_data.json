@@ -1,0 +1,121 @@
+{
+  "data": [
+    {
+      "company_id": "1051",
+      "coordination_entry_key": "0000000000000000001",
+      "coordination_seminar_key": "0000000000000000001",
+      "coordination_seminar_schedule_key": "0000000000000000001",
+      "coordination_company_key": "7210338",
+      "coordination_job_seeker_key": "a0000000000000000000000000000000000000000000000001",
+      "coordination_job_seeker_id": "a0000000000000000000000000000000000000000000000001",
+      "coordination_job_category_key": "0000000000000000001",
+      "media_flag": "10002022",
+      "entry_reception_date": "2019/10/28 20:30",
+      "media_type": "10",
+      "entry_type": "001",
+      "posting_start_date": "2019/10/28",
+      "posting_end_date": "2019/11/28",
+      "view_start_time": "2019/10/28 19:40:11",
+      "view_end_time": "2019/11/28 19:40:11",
+      "applicant_screening_immunity_flag": "0",
+      "application_job_category_name": "テスト機種",
+      "resume": [
+        {
+          "family_name": "毎日",
+          "name": "太郎",
+          "family_name_kana": "タナカ",
+          "name_kana": "タロウ",
+          "birthdate": "2019/10/2",
+          "sex": "0",
+          "spouse": "0",
+          "address": {
+            "address_type": "1",
+            "address_type_name": "現住所",
+            "postal_code": "1000003",
+            "prefectures_code": "13",
+            "address_after_city": "千代田区 一ツ橋（１丁目）１－１"
+          },
+          "phone": [
+            {
+              "phone_number_type": "10",
+              "phone_number_type_name": "携帯",
+              "phone_number": "03-0000-1111"
+            },
+            {
+              "phone_number_type": "20",
+              "phone_number_type_name": "自宅",
+              "phone_number": "03-0000-1111"
+            }
+          ],
+          "e_mail": {
+            "mail_address_type": "1",
+            "mail_address_type_name": "携帯",
+            "mail_address": "test@test.jp"
+          },
+          "current_working_status_type": "01",
+          "current_working_status": "正社員",
+          "current_annual_income": "450～499万円",
+          "suggested_job_change_time": "半年以内",
+          "working_company_count_experience_company_count": "2",
+          "wish_incentive": "これまでのシステム開発経験を新しい職場でも活かせればと思います。",
+          "self_pr": "さらに頑張ります。",
+          "notice": "頑張ります。",
+          "suggested_working_place": [
+            {
+              "place": "01"
+            }
+          ],
+          "suggested_annual_income": "500万円",
+          "educational_background_summary": "大学 経済・経営・管理系　毎日大学 経営学部経営情報学科 (2001年～2005年:中退・転学) 高等学校 東京都立毎日高等学校 (1998年～2001年:卒業・修了)summary",
+          "last_educational_background": "10",
+          "educational_background": [
+            {
+              "educational_background_tag": ""
+            }
+          ],
+          "language_force_summary": "【英語】実務レベルリーディング：【初級】平易な文章を理解できるsummary",
+          "language_skill": [
+            {
+              "language_skill_tag": ""
+            }
+          ],
+          "owned_qualification_summary": "普通自動車免許一種 summary",
+          "owned_qualification": [
+            {
+              "owned_qualification_tag": ""
+            }
+          ],
+          "duty_career": [
+            {
+              "company_name": "A社",
+              "enrollment_period": "2012年02月 ～ （現在も就業中）",
+              "duty_career_summary": "Java言語での開発に取り組む過程で、Strutsフレームワークの利用を前提とした開発標準の策定チームに参加し、コーディング規則や命名規則の策定や、スタイルシートや共通部品の作成を行った。summary"
+            }
+          ],
+          "career": [
+            {
+              "career_tag": ""
+            }
+          ],
+          "experience_job_category_summary": "プログラマー（WEB・オープン・モバイル系） 2年以上summary",
+          "experience_job_category": [
+            {
+              "experience_job_category_tag": ""
+            }
+          ],
+          "company_question": [
+            {
+              "question": "あなたの強み、弱みを教えてください。question",
+              "question_number": "1",
+              "question_format": "2",
+              "option": "",
+              "answer": "【強み】論理的思考ができるanswer"
+            }
+          ]
+        }
+      ],
+      "deleted_flag": "0",
+      "update_time": "2022/12/20 20:28:11"
+    }
+  ]
+}
