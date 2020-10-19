@@ -4,6 +4,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
@@ -145,5 +146,15 @@ class StreamForJson {
 
         // System.out.print(json);
         // JSONObject json_test = JSONObject.fromObject(json);
+    }
+}
+
+class StreamForSetTest {
+    public static void main(String[] args) {
+        HashSet<Long> idSet = new HashSet<>();
+        idSet.add(1L);
+        idSet.add(2L);
+        idSet.add(1L);
+        idSet.forEach(x -> System.out.print(x+"\n"));
     }
 }
