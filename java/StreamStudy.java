@@ -8,6 +8,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 class Student {
@@ -156,5 +157,47 @@ class StreamForSetTest {
         idSet.add(2L);
         idSet.add(1L);
         idSet.forEach(x -> System.out.print(x+"\n"));
+    }
+}
+
+class subArray {
+    public static void main(String[] args) {
+        String[] src = new String[]{"1", "2", "3", "4", "5"};
+        String newArray[] = Arrays.copyOfRange(src, 2, src.length);
+        for (String i : newArray) {
+            System.out.println(i);
+        }
+        System.out.println(String.join("",newArray));
+    }
+}
+
+
+class subArray2 {
+    public static void main(String[] args) {
+        Student stuA = new Student(1, "A先生", "M", 184);
+        Student stuB = new Student(2, "B女生", "G", 163);
+        Student stuC = new Student(3, "C先生", "M", 175);
+        Student stuD = new Student(4, "D女生", "G", 158);
+        Student stuE = new Student(5, "E先生", "M", 170);
+        List<Student> list = new ArrayList<>();
+        list.add(stuA);
+        list.add(stuB);
+        list.add(stuC);
+        list.add(stuD);
+        list.add(stuE);
+
+        // map 可以筛选数据，返回其他类型List。
+        List<Float> heightList = list.stream().map(x -> x.getHeight()).collect(Collectors.toList());
+        System.out.print(heightList);
+        System.out.print("\n");
+
+        // filter 可以过滤数据，返回同类型List。
+        List<Student> subHeightList = list.stream().filter(x -> x.getHeight() < 180).collect(Collectors.toList());
+
+        // forEach 可以遍历数据，不返回List。
+        subHeightList.forEach(x -> System.out.print(x.getSex()));
+        System.out.print("\n");
+
+        // subHeightList.removeIf(x -> x.getHeight())
     }
 }
